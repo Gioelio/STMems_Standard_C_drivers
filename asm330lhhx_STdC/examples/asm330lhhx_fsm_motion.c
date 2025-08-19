@@ -165,10 +165,10 @@ void asm330lhhx_fsm_motion(void)
   } while (rst);
 
   /* Start FSM configuration */
-    for ( i = 0; i < (sizeof(asm330lhhx_motion_stationary) /
-                    sizeof(ucf_line_t) ); i++ ) {
-    asm330lhhx_write_reg(&dev_ctx, asm330lhhx_motion_stationary[i].address,
-                       (uint8_t *)&asm330lhhx_motion_stationary[i].data, 1);
+    for ( i = 0; i < (sizeof(asm330lhhx_motion_stationary_conf_0) /
+                    sizeof(struct mems_conf_op) ); i++ ) {
+    asm330lhhx_write_reg(&dev_ctx, asm330lhhx_motion_stationary_conf_0[i].address,
+                       (uint8_t *)&asm330lhhx_motion_stationary_conf_0[i].data, 1);
   }
 
   asm330lhhx_int_notification_set(&dev_ctx,
