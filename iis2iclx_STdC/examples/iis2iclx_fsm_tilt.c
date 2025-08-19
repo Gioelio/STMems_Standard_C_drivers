@@ -165,10 +165,10 @@ void iis2iclx_fsm_tilt(void)
   } while (rst);
 
   /* Start Machine Learning Core configuration */
-  for ( i = 0; i < (sizeof(iis2iclx_tilt) /
-                    sizeof(ucf_line_t) ); i++ ) {
-    iis2iclx_write_reg(&dev_ctx, iis2iclx_tilt[i].address,
-                       (uint8_t *)&iis2iclx_tilt[i].data, 1);
+  for ( i = 0; i < (sizeof(iis2iclx_tilt_conf_0) /
+                    sizeof(struct mems_conf_op) ); i++ ) {
+    iis2iclx_write_reg(&dev_ctx, iis2iclx_tilt_conf_0[i].address,
+                       (uint8_t *)&iis2iclx_tilt_conf_0[i].data, 1);
   }
 
   /* Route signals on interrupt pin 1 */
