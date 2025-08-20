@@ -89,7 +89,7 @@
 #include <string.h>
 #include <stdio.h>
 
-#include "ism330dhcx_freefall_detection.h"
+#include "ism330dhcx_free_fall.h"
 #include "ism330dhcx_reg.h"
 
 #if defined(NUCLEO_F401RE)
@@ -165,10 +165,10 @@ void ism330dhcx_fsm_freefall_detection(void)
   } while (rst);
 
   /* Start Machine Learning Core configuration */
-  for ( i = 0; i < (sizeof(ism330dhcx_freefall_detection) /
-                    sizeof(ucf_line_t) ); i++ ) {
-    ism330dhcx_write_reg(&dev_ctx, ism330dhcx_freefall_detection[i].address,
-                       (uint8_t *)&ism330dhcx_freefall_detection[i].data, 1);
+  for ( i = 0; i < (sizeof(ism330dhcx_free_fall_conf_0) /
+                    sizeof(struct mems_conf_op) ); i++ ) {
+    ism330dhcx_write_reg(&dev_ctx, ism330dhcx_free_fall_conf_0[i].address,
+                       (uint8_t *)&ism330dhcx_free_fall_conf_0[i].data, 1);
   }
 
   /* Route signals on interrupt pin 1 */
