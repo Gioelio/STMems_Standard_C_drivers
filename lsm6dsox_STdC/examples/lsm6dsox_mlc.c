@@ -23,7 +23,7 @@
 
 /*
  * Some MLC examples are available at:
- * https://github.com/STMicroelectronics/STMems_Machine_Learning_Core
+ * https://github.com/STMicroelectronics/st-mems-machine-learning-core
  * the same repository is linked to this repository in folder "_resources"
  *
  * For more information about Machine Learning Core tool please refer

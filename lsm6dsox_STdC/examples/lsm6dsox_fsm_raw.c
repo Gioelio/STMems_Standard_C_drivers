@@ -20,7 +20,7 @@
 
 /*
  * Some MLC examples are available at:
- * https://github.com/STMicroelectronics/STMems_Finite_State_Machine
+ * https://github.com/STMicroelectronics/st-mems-finite-state-machine
  * the same repository is linked to this repository in folder "_resources"
  *
  * For more information about Finite State Machine tool please refer
