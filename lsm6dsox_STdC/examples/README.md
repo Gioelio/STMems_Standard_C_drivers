@@ -76,10 +76,6 @@ Program LSM6DSOX to receive accelerometer and gyrometer data as well as magnetom
 
   - lsm6dsox_sh_lis2mdl_drdy.c
 
-Program LSM6DSOX to receive accelerometer and gyrometer data as well as magnetometer data from lis2mdl sensors attached through Sensor HUB using MLC:
-
-  - lsm6dsox_sh_lis2mdl_mlc.c
-
 ## Sensor HUB and FIFO
 
 Program LSM6DSOX to receive in FIFO accelerometer and gyrometer data as well as magnetometer data from lis2mdl sensors attached through Sensor HUB using FIFO threshold events on INT1:

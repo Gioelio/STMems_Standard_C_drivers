@@ -169,11 +169,11 @@ void lsm6dsox_multi_conf(void)
   } while (rst);
 
   /* Start Machine Learning Core configuration */
-  for ( i = 0; i < (sizeof(lsm6dsox_yoga_pose_recognition) /
+  for ( i = 0; i < (sizeof(lsm6dsox_yoga_pose_recognition_conf_0) /
                     sizeof(ucf_line_t) ); i++ ) {
     lsm6dsox_write_reg(&dev_ctx,
-                       lsm6dsox_yoga_pose_recognition[i].address,
-                       (uint8_t *)&lsm6dsox_yoga_pose_recognition[i].data, 1);
+                       lsm6dsox_yoga_pose_recognition_conf_0[i].address,
+                       (uint8_t *)&lsm6dsox_yoga_pose_recognition_conf_0[i].data, 1);
   }
 
   /* End Machine Learning Core configuration */
